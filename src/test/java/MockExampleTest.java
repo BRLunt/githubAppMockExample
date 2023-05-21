@@ -13,4 +13,14 @@ class MockExampleTest {
     Assertions.assertEquals(1L, ghIssueComment.getId());
 
   }
+
+  @Test
+  void tryWorkAround() {
+    GHIssueComment ghIssueComment = Mockito.mock(GHIssueComment.class);
+    Mockito.doReturn(1L).when(ghIssueComment).getId();
+
+    Assertions.assertEquals(1L, ghIssueComment.getId());
+
+  }
+
 }
